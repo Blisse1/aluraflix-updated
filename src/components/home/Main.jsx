@@ -3,7 +3,7 @@ import "./styles/Main.css"
 function Main() {
     return(
         <main>
-            <div className="content">
+            <div className="Main">
                 <div className="description">
                     <h1>Front End</h1>
                     <h2>Challenge React</h2>

@@ -1,0 +1,15 @@
+article > ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+article li {
+    border: 1px solid black;
+    height: 15vh;
+}
+
+article {
+    border: 1px solid black;
+}

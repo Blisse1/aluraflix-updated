@@ -1,7 +1,7 @@
-import "./styles/CardSection.css"
+import "./CardSection.css"
 import Card from "../home/Card"
 
-function CardSection({cards, categories}) {
+function CardSection({categories, children}) {
     return(
         <>
         {
@@ -10,12 +10,6 @@ function CardSection({cards, categories}) {
                     <div className="container" key={idx}>
                         <article>
                             <h2>{category.title}</h2>
-                            <ul>
-                                {
-                                    cards.length ? <Card categoryTitle={category.title} cards={cards}/>                                      
-                                    : <p>No hay productos disponibles.</p>
-                                }
-                            </ul>
                         </article>
                     </div>
                 );

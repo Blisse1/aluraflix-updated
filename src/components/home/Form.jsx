@@ -1,12 +1,14 @@
 import "./Form.css"
 import { useState } from "react";
 import FormInput from "./FormInput";
+import OptionList from "./OptionList";
 
-function Form({addCards}) {
+function Form({addCards, categoriesList}) {
     const [titulo, setTitulo] = useState("");
     const [imagen, setImagen] = useState("");
     const [video, setVideo] = useState("");
     // const [descripcion, setDescripcion] = useState("");
+    const [option, setOption] = useState("");
 
     const handleSubmit = (e) => {
        e.preventDefault(); 
@@ -14,6 +16,7 @@ function Form({addCards}) {
            titulo,
            imagen,
            video,
+           option,
         };
         return addCards(datos);
     };
@@ -43,6 +46,11 @@ function Form({addCards}) {
                     placeholder="Ingrese la URL del video"
                     value={video}
                     setValue={setVideo}
+                />
+                <OptionList 
+                    value={option}
+                    categories={categoriesList}
+                    setValue={setOption}
                 />
                 <button>Guardar</button>
                 <button>Limpiar</button>

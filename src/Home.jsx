@@ -4,6 +4,7 @@ import Main from './components/home/Main';
 import CardSection from './components/home/CardSection';
 import { useState, useEffect } from 'react';
 import Footer from './components/home/Footer';
+import Card from './components/home/Card';
 
 function Home() {
     const [cards, setCards] = useState([]);
@@ -28,8 +29,7 @@ function Home() {
         <Main />
         {
             categories &&
-            <CardSection categories={categories} >
-            </CardSection>
+            <CardSection categories={categories} cards={cards}/>
         }
         <Footer />
         </>

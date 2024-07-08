@@ -4,11 +4,13 @@ function Card({cards, categoryTitle}) {
     return(
         <>
         {
-            cards.filter((card) => card.category === categoryTitle)
+            cards.filter((card) => card.option === categoryTitle)
                 .map((card, idx) => {
                     return (
                         <li key={idx}>
-                            <p>{card.text}</p>
+                            <p>{card.titulo}</p>
+                            <p>{card.imagen}</p>
+                            <p>{card.video}</p>
                         </li>
                     );
                 })

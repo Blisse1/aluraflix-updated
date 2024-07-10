@@ -7,9 +7,11 @@ article > ul {
 
 article li {
     border: 1px solid black;
-    height: 15vh;
+    height: 25vh;
+    width: 20vw;
 }
 
 article {
     border: 1px solid black;
+    color: white;
 }

@@ -1,7 +1,7 @@
 import "./CardSection.css"
 import Card from "../home/Card"
 
-function CardSection({cards, categories}) {
+function CardSection({cards, categories, handleDelete, toggleDialog}) {
     return(
         <>
         {
@@ -12,7 +12,8 @@ function CardSection({cards, categories}) {
                             <h2>{category.title}</h2>
                             <ul>
                                 {
-                                    cards.length ? <Card categoryTitle={category.title} cards={cards}/>                                      
+                                    cards.length ? <Card categoryTitle={category.title} cards={cards} 
+                                    handleDelete={handleDelete} toggleDialog={toggleDialog}/>                                      
                                     : <p>No hay productos disponibles.</p>
                                 }
                             </ul>

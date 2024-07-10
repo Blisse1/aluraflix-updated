@@ -1,3 +1,30 @@
 label {
     display: block;
+    margin-bottom: 10px;
+}
+.formContainer {
+    color: white;
+    border: 1px solid yellow;
+    width: 50%;
+    margin: 0 auto;
+}
+.formContainer form {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+form button {
+    width: 30%;
+}
+.option-list select{
+    border: none;
+    height: 15vh;
+}
+
+form input {
+    height: 5vh;
+    border: none;
 }

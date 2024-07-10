@@ -1,6 +1,7 @@
 import "./Card.css"
 
-function Card({cards, categoryTitle}) {
+function Card({cards, categoryTitle, handleDelete, toggleDialog}) {
+
     return(
         <>
         {
@@ -11,6 +12,8 @@ function Card({cards, categoryTitle}) {
                             <p>{card.titulo}</p>
                             <p>{card.imagen}</p>
                             <p>{card.video}</p>
+                            <button onClick={() => handleDelete(card.id)}>Delete</button>
+                            <button onClick={() => toggleDialog({card})}>Edit</button>
                         </li>
                     );
                 })

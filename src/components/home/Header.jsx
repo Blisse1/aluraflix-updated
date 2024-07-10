@@ -1,21 +1,22 @@
 import "./Header.css"
 import { Link } from "react-router-dom";
+import img from "/img/aluraflix-logo.png"
 
-function Header() {
+function Header({addClass, addSecondClass}) {
     return(
         <header>
             <nav>
                 <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg"
+                    src={img}
                     width="100px"
                     heigth="100px"
                 />
                 <ul>
                     <li>
-                        <button>Home</button>
+                        <Link to="/" className="visited"><button className={addSecondClass}>Home</button></Link>
                     </li>
                     <li>
-                        <button><Link to="/video">New Video</Link></button>
+                        <Link to="/video" className="visited"><button className={addClass}>New Video</button></Link>
                     </li>
                 </ul>
             </nav>

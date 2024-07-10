@@ -1,12 +1,7 @@
 .Main {
     display: grid;
-    border: 1px solid yellow;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-}
-
-.Main > * {
-    background-color: lightcyan;
 }
 
 .description {
@@ -14,13 +9,23 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 15px;
-    border: 1px solid black;
     grid-column: 1;
     grid-row: 1;
+    color: white;
 }
 
 .Main > img {
     grid-column: 2;
     grid-row: 1;
     display: inline-block;
+}
+
+.titleStyle {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    background-color: #6BD1FF;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
 }

@@ -3,6 +3,8 @@
 // import VideoInput from "./VideoInput";
 import { useState, useEffect } from "react";
 import Form from "./Form";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function Video() {
     const [categoriesList, setCategoriesList] = useState([]);
@@ -29,7 +31,11 @@ function Video() {
     }, [])
 
     return (
+        <>
+        <Header addClass={"onThisPage"} addSecondClass={"nonSelected"}/>
         <Form addCards={addCards} categoriesList={categoriesList}/>   
+        <Footer />
+        </>
     );
 }
 

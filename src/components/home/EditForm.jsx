@@ -3,11 +3,10 @@ import { useState } from "react";
 import FormInput from "./FormInput";
 import OptionList from "./OptionList";
 
-function Form({addCards, categoriesList}) {
-    const [titulo, setTitulo] = useState("");
-    const [imagen, setImagen] = useState("");
-    const [video, setVideo] = useState("");
-    // const [descripcion, setDescripcion] = useState("");
+function EditForm({handleEdit, categoriesList, cardId}) {
+    const [titulo, setTitulo] = useState("")
+    const [imagen, setImagen] = useState("")
+    const [video, setVideo] = useState("")    // const [descripcion, setDescripcion] = useState("");
     const [option, setOption] = useState("");
 
     const handleSubmit = (e) => {
@@ -18,7 +17,7 @@ function Form({addCards, categoriesList}) {
            video,
            option,
         };
-        return addCards(datos);
+        return handleEdit(datos, cardId);
     };
 
     return(
@@ -30,19 +29,19 @@ function Form({addCards, categoriesList}) {
                 tarjeta de video.
                 </span>
                 <FormInput 
-                    titulo="Titulo"
+                    titulo="titulo"
                     placeholder="Ingrese el título"
                     value={titulo}
                     setValue={setTitulo}
                 />
                 <FormInput 
-                    titulo="Imagen"
+                    titulo="imagen"
                     placeholder="Ingrese la URL de la imagen"
                     value={imagen}
                     setValue={setImagen}
                 />
                 <FormInput 
-                    titulo="Video"
+                    titulo="video"
                     placeholder="Ingrese la URL del video"
                     value={video}
                     setValue={setVideo}
@@ -59,4 +58,4 @@ function Form({addCards, categoriesList}) {
     );
 }
 
-export default Form;
+export default EditForm;

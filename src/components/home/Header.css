@@ -1,7 +1,6 @@
 nav {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
     align-items: center;
     padding: 15px;
 }
@@ -9,14 +8,36 @@ nav > ul {
     list-style: none;
     width: 30%;
     height: 5vh;
-    border: 1px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-button {
+header button {
     height: 5vh;
     width: 10vw;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+}
+.onThisPage {
+    font-size: 1.2rem;
+    background: black;
+    font-weight: bold;
+    color: #2271D1;
+    border: 2px solid #2271D1;
+    box-shadow: inset 0 0 20px #2271D1;
+}
+.nonSelected {
+    background: none;
+    border: 2px solid white;
+}
+.visited button {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.visited {
+    text-decoration: none;
+    color: #2271D1;
 }

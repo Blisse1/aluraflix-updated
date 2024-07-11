@@ -5,3 +5,45 @@ body {
     box-sizing: border-box;
     background-color: #262626;
 }
+
+@media (max-width: 600px) {
+    main > .Main {
+        display: flex;
+        flex-direction: column;
+    }
+    .description > p {
+       width: 70%; 
+    }
+    .Main > img {
+        width: 50%;
+    }
+    .Card {
+        width: 50vw;
+    }
+    article > ul {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+/* (tablets) */
+/* @media (min-width: 601px) and (max-width: 1024px) { */
+/*     .container { */
+/*         margin-top: 50px; */
+/*         margin-left: 20px; */
+/*         width: 85%; */
+/*         font-size: 1.2em; */
+/*     } */
+
+/*     nav ul { */
+/*         display: flex; */
+/*         flex-direction: row; */
+/*         justify-content: space-around; */
+/*     } */
+
+/*     nav ul li { */
+/*         margin-bottom: 0; */
+/*     } */
+/* } */
+
+

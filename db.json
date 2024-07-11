@@ -1,15 +1,71 @@
 {
   "cards": [
+    {
+      "titulo": "Vim",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
+      "video": "asd",
+      "option": "Front-end",
+      "description": "asd",
+      "id": 1
+    },
+    {
+      "titulo": "Nuevo Titulo",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/0/08/EmacsIcon.svg",
+      "video": "asd",
+      "option": "Front-end",
+      "description": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
+      "id": 2
+    },
+    {
+      "titulo": "asd",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
+      "video": "asd",
+      "option": "DevOps",
+      "description": "asd",
+      "id": 4
+    },
+    {
+      "titulo": "emacs",
+      "imagen": "https://www.gnu.org/software/emacs/images/emacs.png",
+      "video": "asd",
+      "option": "Front-end",
+      "description": "asd",
+      "id": 5
+    },
+    {
+      "titulo": "asd",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
+      "video": "asd",
+      "option": "DevOps",
+      "description": "asdasd",
+      "id": 6
+    },
+    {
+      "titulo": "asd",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
+      "video": "asd",
+      "option": "DevOps",
+      "description": "asdasd",
+      "id": 7
+    },
+    {
+      "titulo": "DevSec",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg",
+      "video": "asd",
+      "option": "DevSecOps",
+      "description": "asd",
+      "id": 8
+    }
   ],
   "categories": [
     {
-      "title": "front-end"
+      "title": "Front-end"
     },
     {
-      "title": "back-end"
+      "title": "Back-end"
     },
     {
-      "title": "dev-ops"
+      "title": "DevOps"
     },
     {
       "title": "DevSecOps"

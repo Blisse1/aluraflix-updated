@@ -1,3 +1,7 @@
+.cardContainer {
+    border: 1px solid #2271D1;
+    padding: 10px;
+}
 article > ul {
     list-style: none;
     display: flex;
@@ -6,12 +10,10 @@ article > ul {
 }
 
 article li {
-    border: 1px solid black;
-    height: 25vh;
+    height: 50vh;
     width: 20vw;
 }
 
 article {
-    border: 1px solid black;
     color: white;
 }

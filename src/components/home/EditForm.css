@@ -1,0 +1,9 @@
+.editFormContainer {
+    width: 25vw;
+    color: white;
+}
+.edit {
+   display: flex; 
+   flex-direction: column;
+   gap: 10px;
+}

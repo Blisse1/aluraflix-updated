@@ -7,7 +7,7 @@ function CardSection({cards, categories, handleDelete, toggleDialog}) {
         {
             categories.map(( category, idx ) => {
                 return (
-                    <div className="container" key={idx}>
+                    <div className="cardContainer" key={idx}>
                         <article>
                             <h2>{category.title}</h2>
                             <ul>

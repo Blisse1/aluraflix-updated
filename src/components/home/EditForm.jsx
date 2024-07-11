@@ -1,12 +1,12 @@
-import "./Form.css"
+import "./EditForm.css"
 import { useState } from "react";
 import FormInput from "./FormInput";
 import OptionList from "./OptionList";
 
 function EditForm({handleEdit, categoriesList, cardId}) {
-    const [titulo, setTitulo] = useState("")
-    const [imagen, setImagen] = useState("")
-    const [video, setVideo] = useState("")    // const [descripcion, setDescripcion] = useState("");
+    const [titulo, setTitulo] = useState("");
+    const [imagen, setImagen] = useState("");
+    const [video, setVideo] = useState("");
     const [option, setOption] = useState("");
 
     const handleSubmit = (e) => {
@@ -21,27 +21,23 @@ function EditForm({handleEdit, categoriesList, cardId}) {
     };
 
     return(
-        <div className="formContainer">
-            <form onSubmit={handleSubmit}>
-                <h1>Nuevo Video</h1>
-                <span>
-                Complete el Formulario para crear una nueva
-                tarjeta de video.
-                </span>
+        <div className="editFormContainer">
+            <form onSubmit={handleSubmit} className="edit">
+                <h1>Editar Video</h1>
                 <FormInput 
-                    titulo="titulo"
+                    titulo="Nuevo Titulo"
                     placeholder="Ingrese el título"
                     value={titulo}
                     setValue={setTitulo}
                 />
                 <FormInput 
-                    titulo="imagen"
+                    titulo="Nueva Imagen"
                     placeholder="Ingrese la URL de la imagen"
                     value={imagen}
                     setValue={setImagen}
                 />
                 <FormInput 
-                    titulo="video"
+                    titulo="Nuevo Video"
                     placeholder="Ingrese la URL del video"
                     value={video}
                     setValue={setVideo}

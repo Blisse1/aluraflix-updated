@@ -1,12 +1,12 @@
+.formContainer {
+    color: white;
+    border: 2px solid #2271D1;
+    width: 50%;
+    margin: 0 auto;
+}
 label {
     display: block;
     margin-bottom: 10px;
-}
-.formContainer {
-    color: white;
-    border: 1px solid yellow;
-    width: 50%;
-    margin: 0 auto;
 }
 .formContainer form {
     display: flex;
@@ -16,15 +16,36 @@ label {
     font-size: 1.5rem;
 }
 
-form button {
-    width: 30%;
+.formBtn {
+    font-size: 1.2rem;
+    width: 50%;
+    cursor: pointer;
+    height: 5vh;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    color: white;
+    background-color: #262626;
+}
+
+.formBtn:active {
+    border: 2px solid #2271D1;
 }
 .option-list select{
     border: none;
-    height: 15vh;
+    height: 5vh;
+    width: 50%;
 }
 
-form input {
+.mainForm input {
     height: 5vh;
     border: none;
+    width: 50%;
+}
+textarea {
+   width: 50%; 
+   padding: 0;
+   margin: 0;
+}
+.mainForm > h1 {
+    margin: 0;
 }

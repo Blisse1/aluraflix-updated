@@ -10,6 +10,7 @@ function Home() {
     const [cards, setCards] = useState([]);
     const [categories, setCategories] = useState([]);
     const [dialogContent, setDialogContent] = useState();
+    const [insideDialog, setInsideDialog] = useState(true);
     const dialogRef = useRef(null)
 
     useEffect(() => {
@@ -48,8 +49,8 @@ function Home() {
         await response.json();
     };
 
-    const toggleDialog = async({card}) => {
-        setDialogContent(<EditForm cardTitle={card.titulo} categoriesList={categories} handleEdit={handleEdit} cardId={card.id}/>)
+    const toggleDialog = ({card}) => {
+        setDialogContent(<EditForm cardTitle={card.titulo} categoriesList={categories} handleEdit={handleEdit} cardId={card.id} />)
         if(!dialogRef.current){
             return;
         }
@@ -57,7 +58,13 @@ function Home() {
             ? dialogRef.current.close()
             : dialogRef.current.showModal()
     };
-    
+
+    const toggleSecondDialog = () => {
+        dialogRef.current.hasAttribute("open")
+            ? dialogRef.current.close()
+            : dialogRef.current.showModal()
+    }
+
     return (
         <>
         <Header addClass={"nonSelected"} addSecondClass={"onThisPage"}/>
@@ -70,7 +77,10 @@ function Home() {
                 handleDelete={handleDelete}
                 toggleDialog={toggleDialog}/>
         }
-        <dialog ref={dialogRef} style={{backgroundColor: "black"}}>{dialogContent}</dialog>
+        <dialog ref={dialogRef} style={{backgroundColor: "black"}}>
+            {dialogContent}
+            <button onClick={toggleSecondDialog}>Close Window</button>
+        </dialog>
         <Footer />
         </>
     );
